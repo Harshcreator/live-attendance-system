@@ -1,4 +1,4 @@
-# 📋 Live Attendance System
+# Live Attendance System
 
 A real-time attendance tracking system built with Node.js, Express, WebSocket, and MongoDB. Teachers can start live attendance sessions, and students can mark their presence in real-time.
 
@@ -7,7 +7,7 @@ A real-time attendance tracking system built with Node.js, Express, WebSocket, a
 ![MongoDB](https://img.shields.io/badge/MongoDB-7.0-brightgreen)
 ![WebSocket](https://img.shields.io/badge/WebSocket-Enabled-orange)
 
-## ✨ Features
+## Features
 
 - **Real-time Attendance**: WebSocket-based live attendance marking
 - **Role-based Access**: Separate flows for teachers and students
@@ -16,7 +16,7 @@ A real-time attendance tracking system built with Node.js, Express, WebSocket, a
 - **Attendance History**: Track and view attendance records
 - **Input Validation**: Request validation using Zod schemas
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -58,35 +58,7 @@ A real-time attendance tracking system built with Node.js, Express, WebSocket, a
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## 📁 Project Structure
-
-```
-src/
-├── index.ts                 # Application entry point
-├── config/
-│   └── db.ts                # MongoDB connection configuration
-├── models/
-│   ├── user.ts              # User model (teacher/student)
-│   ├── class.ts             # Class model
-│   └── attendance.ts        # Attendance record model
-├── auth/
-│   ├── auth.schema.ts       # Zod validation schemas
-│   ├── authcontroller.ts    # Auth routes (signup, login, me)
-│   └── authservice.ts       # Auth business logic
-├── class/
-│   ├── class.schema.ts      # Class validation schemas
-│   ├── classcontroller.ts   # Class CRUD routes
-│   └── class_service.ts     # Class business logic
-├── attendance/
-│   ├── attendancecontroller.ts  # Attendance REST routes
-│   ├── attendance_service.ts    # Attendance business logic
-│   └── websocket.ts             # Real-time WebSocket handler
-└── middleware/
-    ├── auth.ts              # JWT authentication middleware
-    └── roleGuard.ts         # Role-based access control
-```
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -123,7 +95,7 @@ src/
 
    The server will be available at `http://localhost:3000`
 
-## 📚 API Reference
+## API Reference
 
 ### Authentication
 
@@ -307,7 +279,7 @@ Upon successful connection, you'll receive:
 }
 ```
 
-## 🔐 Authentication Flow
+## Authentication Flow
 
 ```
 ┌─────────┐         ┌─────────┐         ┌─────────┐
@@ -332,7 +304,7 @@ Upon successful connection, you'll receive:
      │                   │                   │
 ```
 
-## 📊 Data Models
+## Data Models
 
 ### User
 ```typescript
@@ -371,7 +343,7 @@ Upon successful connection, you'll receive:
 }
 ```
 
-## 🔄 Real-time Attendance Flow
+## Real-time Attendance Flow
 
 ```
 ┌──────────┐      ┌──────────┐      ┌──────────┐      ┌──────────┐
@@ -410,7 +382,7 @@ Upon successful connection, you'll receive:
      │                 │                 │                 │
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -424,7 +396,7 @@ Upon successful connection, you'll receive:
 | **Zod** | Schema validation |
 | **dotenv** | Environment configuration |
 
-## 🔒 Security Features
+## Security Features
 
 - **Password Hashing**: All passwords are hashed using bcrypt
 - **JWT Authentication**: Stateless token-based authentication
@@ -432,7 +404,7 @@ Upon successful connection, you'll receive:
 - **Input Validation**: All inputs validated using Zod schemas
 - **WebSocket Authentication**: Token-based WS connection auth
 
-## 📝 Environment Variables
+## Environment Variables
 
 | Variable | Description | Required |
 |----------|-------------|----------|
@@ -440,7 +412,7 @@ Upon successful connection, you'll receive:
 | `MONGODB_URI` | MongoDB connection string | Yes |
 | `JWT_SECRET` | Secret key for JWT signing | Yes |
 
-## 🧪 Testing WebSocket
+## Testing WebSocket
 
 You can test the WebSocket connection using a tool like `wscat`:
 
@@ -458,11 +430,11 @@ wscat -c "ws://localhost:3000?token=<TEACHER_JWT_TOKEN>"
 {"type": "end_session"}
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the ISC License.
 
-## 👤 Author
+## Author
 
 **Harshcreator**
 
